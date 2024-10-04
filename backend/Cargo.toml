@@ -1,0 +1,19 @@
+[package]
+name = "terrain-image-generator"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4"  # for building the web server
+actix-cors = "0.7"
+actix-files = "0.6.6"
+serde = { version = "1", features = ["derive"] }  # for serialization/deserialization
+serde_json = "1.0"
+uuid = { version = "1", features = ["v4"] }  # for generating unique file names
+tokio = { version = "1", features = ["full"] }  # for async runtime
+image = "0.25.2"
+regex = "1.11.0"
+svg = "0.18"
+geojson = "0.24.1"
+geo-types = "0.7"
+geo = "0.28"
