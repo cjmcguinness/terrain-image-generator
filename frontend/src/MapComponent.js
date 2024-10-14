@@ -11,7 +11,7 @@ const MapComponent = () => {
     const [loading, setLoading] = useState(false); // Loading state
 
     useEffect(() => {
-        mapInstance.current = L.map(mapRef.current).setView([45.102, 1.460], 13);
+        mapInstance.current = L.map(mapRef.current).setView([45.102, 1.460], 13);//includes preferred loading coords and zoom
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '© OpenStreetMap contributors'
@@ -66,10 +66,6 @@ const MapComponent = () => {
     return (
         <div>
             <h1>Terrain Image Generator</h1>
-            <p>Select an area using the map</p>
-            <p>Choose between a hillshade or contour image</p>
-            <p>Click "Generate"</p>
-
             <div id="map" ref={mapRef}></div>
 
             <div className="button-radio-container">

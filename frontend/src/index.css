@@ -1,31 +1,31 @@
-/* Reset body margins and padding */
 body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  text-align: justify;
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
-  color: #333;
+  color: #333; 
 }
 
-/* Heading styles */
 h1 {
+  background-color: #333;
+  color: #f4f4f4; 
+  padding: 1rem 1rem; 
   text-align: center;
-  margin-top: 40px;
-  font-size: 2.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  margin: 0; 
+  z-index: 1000;
 }
 
-/* Subtitle text styles */
-p {
-  text-align: center;
-  font-size: 1rem;
-  margin: 5px 0;
-}
 
 /* Map container styling */
 #map {
   height: 600px !important;
   width: 1000px !important; 
-  border: 2px solid #ddd;
+  border: 2px solid #f4f4f4;
   border-radius: 8px;
   margin: 20px auto; 
 }
@@ -58,8 +58,8 @@ p {
 button {
   padding: 12px 20px;
   font-size: 1.2rem;
-  background-color: #007bff;
-  color: white;
+  background-color: #333;
+  color: #f4f4f4;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -68,7 +68,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #7a7a7a;
 }
 
 /* Loading spinner styling */
@@ -77,7 +77,7 @@ button:hover {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border-left-color: #007bff;
+  border-left-color: #333;
   animation: spin 1s linear infinite;
   margin: 20px auto; 
 }
@@ -93,14 +93,46 @@ label {
   margin: 0 10px; 
   font-size: 1.1rem;
   display: flex; 
-  align-items: center;
+  align-items: center; /* Vertically centers the label text with the radio button */
 }
 
+/* Custom radio button styling */
 input[type="radio"] {
   margin-right: 5px; 
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle; /* Ensures the radio button is vertically aligned with the text */
+}
+
+input[type="radio"]:checked::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .radio-options {
   display: flex; 
   justify-content: center; 
+}
+
+footer {
+  background-color: #333;
+  color: #f4f4f4;
+  text-align: center;
+  padding: 1rem;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
